@@ -28,7 +28,7 @@ import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import android.widget.RemoteViewsService.RemoteViewsFactory
 import org.thatmobiledevguy.platform.utils.StringUtils.Companion.splitLongs
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.core.models.Habit
 import org.thatmobiledevguy.yoiShukan.core.models.HabitNotFoundException
@@ -89,7 +89,7 @@ internal class StackRemoteViewsFactory(private val context: Context, intent: Int
     override fun getViewAt(position: Int): RemoteViews? {
         Log.i("StackRemoteViewsFactory", "getViewAt $position started")
         if (position < 0 || position >= habitIds.size) return null
-        val app = context.applicationContext as HabitsApplication
+        val app = context.applicationContext as YoiShukanApplication
         val prefs = app.component.preferences
         val habitList = app.component.habitList
         val options = AppWidgetManager.getInstance(context).getAppWidgetOptions(widgetId)

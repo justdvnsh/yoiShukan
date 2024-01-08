@@ -33,7 +33,7 @@ import androidx.core.content.ContextCompat.checkSelfPermission
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.thatmobiledevguy.yoiShukan.BaseExceptionHandler
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.activities.habits.list.views.HabitCardListAdapter
 import org.thatmobiledevguy.yoiShukan.core.models.Timestamp
 import org.thatmobiledevguy.yoiShukan.core.preferences.Preferences
@@ -81,7 +81,7 @@ class ListHabitsActivity : AppCompatActivity(), Preferences.Listener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        appComponent = (applicationContext as HabitsApplication).component
+        appComponent = (applicationContext as YoiShukanApplication).component
         component = DaggerHabitsActivityComponent
             .builder()
             .activityContextModule(ActivityContextModule(this))

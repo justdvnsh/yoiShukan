@@ -30,7 +30,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.thatmobiledevguy.platform.gui.toInt
 import org.thatmobiledevguy.yoiShukan.AndroidDirFinder
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.activities.HabitsDirFinder
@@ -73,7 +73,7 @@ class ShowHabitActivity : AppCompatActivity(), CommandRunner.Listener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val appComponent = (applicationContext as HabitsApplication).component
+        val appComponent = (applicationContext as YoiShukanApplication).component
         val habitList = appComponent.habitList
         habit = habitList.getById(ContentUris.parseId(intent.data!!))!!
         preferences = appComponent.preferences

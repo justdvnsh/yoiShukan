@@ -21,14 +21,14 @@ package org.thatmobiledevguy.yoiShukan.automation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.core.models.HabitMatcher
 
 class EditSettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val app = applicationContext as HabitsApplication
+        val app = applicationContext as YoiShukanApplication
         val habits = app.component.habitList.getFiltered(
             HabitMatcher(
                 isArchivedAllowed = false,

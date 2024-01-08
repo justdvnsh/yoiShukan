@@ -24,7 +24,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatDialogFragment
 import org.thatmobiledevguy.platform.gui.AndroidDataView
 import org.thatmobiledevguy.platform.time.JavaLocalDateFormatter
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.core.commands.Command
@@ -51,7 +51,7 @@ class HistoryEditorDialog : AppCompatDialogFragment(), CommandRunner.Listener {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         clearCurrentDialog()
-        val component = (requireActivity().application as HabitsApplication).component
+        val component = (requireActivity().application as YoiShukanApplication).component
         commandRunner = component.commandRunner
         habit = component.habitList.getById(requireArguments().getLong("habit"))!!
         preferences = component.preferences

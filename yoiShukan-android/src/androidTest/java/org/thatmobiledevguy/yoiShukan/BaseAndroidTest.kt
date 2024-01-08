@@ -88,7 +88,7 @@ abstract class BaseAndroidTest : TestCase() {
             .appContextModule(AppContextModule(context))
             .habitsModule(HabitsModule(dbFile))
             .build()
-        HabitsApplication.component = appComponent
+        YoiShukanApplication.component = appComponent
         prefs = appComponent.preferences
         habitList = appComponent.habitList
         taskRunner = appComponent.taskRunner

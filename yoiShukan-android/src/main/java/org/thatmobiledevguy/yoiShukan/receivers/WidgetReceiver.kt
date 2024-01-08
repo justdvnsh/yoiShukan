@@ -23,7 +23,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import dagger.Component
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.core.ui.widgets.WidgetBehavior
 import org.thatmobiledevguy.yoiShukan.inject.HabitsApplicationComponent
 import org.thatmobiledevguy.yoiShukan.intents.IntentParser.CheckmarkIntentData
@@ -36,7 +36,7 @@ import org.thatmobiledevguy.yoiShukan.intents.IntentParser.CheckmarkIntentData
  */
 class WidgetReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        val app = context.applicationContext as HabitsApplication
+        val app = context.applicationContext as YoiShukanApplication
         val component = DaggerWidgetReceiver_WidgetComponent
             .builder()
             .habitsApplicationComponent(app.component)

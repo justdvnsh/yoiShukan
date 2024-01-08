@@ -25,9 +25,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".HabitsApplication"
+        android:name=".YoiShukanApplication"
         android:allowBackup="true"
-        android:backupAgent=".HabitsBackupAgent"
+        android:backupAgent=".YoiShukanBackupAgent"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/main_activity_title"
         android:localeConfig="@xml/locales_config"

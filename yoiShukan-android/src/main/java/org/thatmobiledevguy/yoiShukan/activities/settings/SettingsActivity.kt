@@ -21,7 +21,7 @@ package org.thatmobiledevguy.yoiShukan.activities.settings
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.core.models.PaletteColor
@@ -31,7 +31,7 @@ import org.thatmobiledevguy.yoiShukan.utils.setupToolbar
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val component = (application as HabitsApplication).component
+        val component = (application as YoiShukanApplication).component
         val themeSwitcher = AndroidThemeSwitcher(this, component.preferences)
         themeSwitcher.apply()
 

@@ -25,7 +25,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
 import android.util.Log
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.core.models.Habit
 import org.thatmobiledevguy.yoiShukan.core.models.Timestamp
 import org.thatmobiledevguy.yoiShukan.core.utils.DateUtils.Companion.getStartOfTodayWithOffset
@@ -41,7 +41,7 @@ class ReminderReceiver : BroadcastReceiver() {
         if (context == null || intent == null) return
         if (intent.action == null) return
         lastReceivedIntent = intent
-        val app = context.applicationContext as HabitsApplication
+        val app = context.applicationContext as YoiShukanApplication
         val appComponent = app.component
         val habits = appComponent.habitList
         val reminderController = appComponent.reminderController

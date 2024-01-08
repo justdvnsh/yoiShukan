@@ -25,7 +25,7 @@ import android.view.LayoutInflater
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatDialogFragment
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.core.models.Entry.Companion.NO
 import org.thatmobiledevguy.yoiShukan.core.models.Entry.Companion.SKIP
@@ -39,7 +39,7 @@ class CheckmarkDialog : AppCompatDialogFragment() {
     var onToggle: (Int, String) -> Unit = { _, _ -> }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val appComponent = (requireActivity().application as HabitsApplication).component
+        val appComponent = (requireActivity().application as YoiShukanApplication).component
         val prefs = appComponent.preferences
         val view = CheckmarkPopupBinding.inflate(LayoutInflater.from(context))
         arrayOf(view.yesBtn, view.skipBtn).forEach {

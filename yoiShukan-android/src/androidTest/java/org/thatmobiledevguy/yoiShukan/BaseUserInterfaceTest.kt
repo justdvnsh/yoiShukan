@@ -45,7 +45,7 @@ open class BaseUserInterfaceTest {
     fun setUp() {
         device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         val app =
-            ApplicationProvider.getApplicationContext<Context>().applicationContext as HabitsApplication
+            ApplicationProvider.getApplicationContext<Context>().applicationContext as YoiShukanApplication
         component = app.component
         habitList = component.habitList
         prefs = component.preferences

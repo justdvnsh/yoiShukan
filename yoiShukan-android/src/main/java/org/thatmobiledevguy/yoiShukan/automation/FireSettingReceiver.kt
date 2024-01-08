@@ -23,7 +23,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import dagger.Component
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.core.models.HabitList
 import org.thatmobiledevguy.yoiShukan.core.ui.widgets.WidgetBehavior
 import org.thatmobiledevguy.yoiShukan.core.utils.DateUtils
@@ -44,7 +44,7 @@ class FireSettingReceiver : BroadcastReceiver() {
     private lateinit var allHabits: HabitList
 
     override fun onReceive(context: Context, intent: Intent) {
-        val app = context.applicationContext as HabitsApplication
+        val app = context.applicationContext as YoiShukanApplication
         val component = DaggerFireSettingReceiver_ReceiverComponent
             .builder()
             .habitsApplicationComponent(app.component)

@@ -36,7 +36,7 @@ import androidx.fragment.app.DialogFragment
 import com.android.datetimepicker.time.RadialPickerLayout
 import com.android.datetimepicker.time.TimePickerDialog
 import org.thatmobiledevguy.platform.gui.toInt
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.activities.common.dialogs.ColorPickerDialogFactory
@@ -89,7 +89,7 @@ class EditHabitActivity : AppCompatActivity() {
     override fun onCreate(state: Bundle?) {
         super.onCreate(state)
 
-        val component = (application as HabitsApplication).component
+        val component = (application as YoiShukanApplication).component
         themeSwitcher = AndroidThemeSwitcher(this, component.preferences)
         themeSwitcher.apply()
 
@@ -257,7 +257,7 @@ class EditHabitActivity : AppCompatActivity() {
     }
 
     private fun save() {
-        val component = (application as HabitsApplication).component
+        val component = (application as YoiShukanApplication).component
         val habit = component.modelFactory.buildHabit()
 
         var original: Habit? = null

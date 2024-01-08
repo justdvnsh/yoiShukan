@@ -29,7 +29,7 @@ import androidx.fragment.app.FragmentActivity
 import com.android.datetimepicker.time.RadialPickerLayout
 import com.android.datetimepicker.time.TimePickerDialog
 import org.thatmobiledevguy.platform.gui.toInt
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 import org.thatmobiledevguy.yoiShukan.core.models.Habit
@@ -49,7 +49,7 @@ class SnoozeDelayPickerActivity : FragmentActivity(), OnItemClickListener {
         super.onCreate(bundle)
         val intent = intent
         if (intent == null) finish()
-        val app = applicationContext as HabitsApplication
+        val app = applicationContext as YoiShukanApplication
         val appComponent = app.component
         val themeSwitcher = AndroidThemeSwitcher(this, appComponent.preferences)
         themeSwitcher.setTheme()

@@ -20,7 +20,7 @@ package org.thatmobiledevguy.yoiShukan.activities.about
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 
 /**
@@ -30,7 +30,7 @@ import org.thatmobiledevguy.yoiShukan.activities.AndroidThemeSwitcher
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val app = application as HabitsApplication
+        val app = application as YoiShukanApplication
         val screen = AboutScreen(
             this,
             app.component.intentFactory,

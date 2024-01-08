@@ -31,7 +31,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
-import org.thatmobiledevguy.yoiShukan.HabitsApplication
+import org.thatmobiledevguy.yoiShukan.YoiShukanApplication
 import org.thatmobiledevguy.yoiShukan.R
 import org.thatmobiledevguy.yoiShukan.activities.habits.list.RESULT_BUG_REPORT
 import org.thatmobiledevguy.yoiShukan.activities.habits.list.RESULT_EXPORT_CSV
@@ -68,7 +68,7 @@ class SettingsFragment : PreferenceFragmentCompat(), OnSharedPreferenceChangeLis
         super.onCreate(savedInstanceState)
         addPreferencesFromResource(R.xml.preferences)
         val appContext = requireContext().applicationContext
-        if (appContext is HabitsApplication) {
+        if (appContext is YoiShukanApplication) {
             prefs = appContext.component.preferences
             widgetUpdater = appContext.component.widgetUpdater
         }
